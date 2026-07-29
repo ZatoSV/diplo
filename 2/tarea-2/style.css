@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #332f2a;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #8fa889;
+}
+
+header {
+    padding: 1.3rem 2rem 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #1a1a1a;
+}
+
+.fila {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+    padding-bottom: 12px;
+}
+
+.fila>* {
+    margin: 0;
+    padding: 1.1rem 1.4rem;
+}
+
+.fila h2 {
+    margin: 0 0 0.6rem 0;
+    font-size: 1.25rem;
+    color: #1a1a1a;
+}
+
+.fila p {
+    margin: 0;
+    line-height: 1.5;
+    color: #262626;
+}
+
+.enlaces {
+    flex: 0 0 160px;
+    background-color: #c0392b;
+}
+
+.enlaces p {
+    color: #ffffff;
+    margin-bottom: 0.6rem;
+}
+
+.enlaces p:last-child {
+    margin-bottom: 0;
+}
+
+.ejemplo {
+    flex: 1 1 auto;
+    background-color: #f1edc4;
+}
+
+.adicional {
+    flex: 0 0 195px;
+    background-color: #c9c39a;
+}
+
+@media (max-width: 800px) {
+    .fila {
+        flex-direction: column;
+        gap: 0;
+        padding-bottom: 0;
+    }
+
+    .enlaces,
+    .ejemplo,
+    .adicional {
+        flex: none;
+        width: 100%;
+    }
+
+    .enlaces {
+        background-color: #f2a93c;
+    }
+
+    .enlaces p {
+        color: #1a1a1a;
+    }
+}
