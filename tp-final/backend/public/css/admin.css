@@ -1,0 +1,280 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --azul: #5b9bd5;
+  --azul-hover: #4482bb;
+  --azul-oscuro: #2c4a63;
+  --gris-texto: #4a4a4a;
+  --gris-claro: #f4f6f8;
+  --borde: #dde3e9;
+  --rojo: #c0392b;
+  --verde: #2e7d4f;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+  color: var(--gris-texto);
+  background-color: var(--gris-claro);
+  line-height: 1.5;
+}
+
+h1 {
+  color: var(--azul-oscuro);
+  margin-top: 0;
+  font-size: 1.6rem;
+}
+
+.contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.contenido {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.cabecera {
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cabecera-fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--azul-oscuro);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.15rem;
+}
+
+.marca small {
+  font-weight: normal;
+  color: #8a96a3;
+}
+
+.marca img {
+  border-radius: 50%;
+}
+
+.nav-admin {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.nav-admin > a:first-child {
+  color: var(--azul-oscuro);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.saludo {
+  color: #8a96a3;
+}
+
+.boton {
+  display: inline-block;
+  background-color: var(--azul);
+  color: #ffffff;
+  border: none;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.boton:hover {
+  background-color: var(--azul-hover);
+}
+
+.boton-chico {
+  padding: 0.35rem 0.8rem;
+  font-size: 0.9rem;
+}
+
+.boton-secundario {
+  background-color: #ffffff;
+  color: var(--azul-oscuro);
+  border: 1px solid var(--borde);
+}
+
+.boton-secundario:hover {
+  background-color: var(--gris-claro);
+}
+
+.boton-peligro {
+  background-color: var(--rojo);
+}
+
+.boton-peligro:hover {
+  background-color: #a5311f;
+}
+
+.tarjeta {
+  background-color: #ffffff;
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  padding: 2rem;
+  max-width: 720px;
+}
+
+.tarjeta-login {
+  max-width: 400px;
+  margin: 3rem auto 0;
+}
+
+.ayuda {
+  margin-top: -0.5rem;
+  color: #8a96a3;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.formulario label {
+  font-weight: 600;
+  color: var(--azul-oscuro);
+  margin-top: 0.6rem;
+}
+
+.formulario input,
+.formulario textarea {
+  font: inherit;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--borde);
+  border-radius: 4px;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  outline: 2px solid var(--azul);
+  outline-offset: -1px;
+}
+
+.formulario .boton {
+  margin-top: 1rem;
+  align-self: flex-start;
+}
+
+.botones {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.alerta {
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+}
+
+.alerta-error {
+  background-color: #fbeaea;
+  color: var(--rojo);
+}
+
+.alerta-ok {
+  background-color: #e6f4ec;
+  color: var(--verde);
+}
+
+.titulo-fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.titulo-fila h1 {
+  margin: 0;
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border: 1px solid var(--borde);
+}
+
+.tabla th,
+.tabla td {
+  text-align: left;
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--borde);
+  vertical-align: top;
+}
+
+.tabla th {
+  background-color: var(--azul-oscuro);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.celda-cuerpo {
+  max-width: 340px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.acciones {
+  display: flex;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.acciones form {
+  margin: 0;
+}
+
+.vacio {
+  background-color: #ffffff;
+  border: 1px dashed var(--borde);
+  padding: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .tabla thead {
+    display: none;
+  }
+
+  .tabla tr {
+    display: block;
+    border-bottom: 1px solid var(--borde);
+    padding: 0.5rem 0;
+  }
+
+  .tabla td {
+    display: block;
+    border: none;
+    padding: 0.25rem 0.75rem;
+  }
+
+  .celda-cuerpo {
+    max-width: none;
+    white-space: normal;
+  }
+}

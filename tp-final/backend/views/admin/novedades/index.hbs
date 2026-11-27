@@ -1,0 +1,41 @@
+<div class="titulo-fila">
+  <h1>Novedades</h1>
+  <a href="/admin/novedades/agregar" class="boton">+ Agregar novedad</a>
+</div>
+
+{{#if mensaje}}
+  <p class="alerta alerta-ok">{{mensaje}}</p>
+{{/if}}
+
+{{#if novedades.length}}
+  <table class="tabla">
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Título</th>
+        <th>Subtítulo</th>
+        <th>Cuerpo</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each novedades}}
+        <tr>
+          <td>{{fecha fecha}}</td>
+          <td><strong>{{titulo}}</strong></td>
+          <td>{{subtitulo}}</td>
+          <td class="celda-cuerpo">{{cuerpo}}</td>
+          <td class="acciones">
+            <a href="/admin/novedades/modificar/{{id}}" class="boton boton-chico boton-secundario">Modificar</a>
+            <form action="/admin/novedades/eliminar/{{id}}" method="post"
+              onsubmit="return confirm('¿Eliminar esta novedad? No se puede deshacer.');">
+              <button type="submit" class="boton boton-chico boton-peligro">Eliminar</button>
+            </form>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <p class="vacio">Todavía no hay novedades. <a href="/admin/novedades/agregar">Agregá la primera</a>.</p>
+{{/if}}

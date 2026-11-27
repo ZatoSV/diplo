@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel InterCargo</title>
+  <link rel="icon" href="/logo.png">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+
+<body>
+  <header class="cabecera">
+    <div class="contenedor cabecera-fila">
+      <a href="/admin/novedades" class="marca">
+        <img src="/logo.png" alt="Logo de InterCargo" width="40" height="40">
+        <span>InterCargo <small>· Panel</small></span>
+      </a>
+      {{#if usuario}}
+        <nav class="nav-admin">
+          <a href="/admin/novedades">Novedades</a>
+          <span class="saludo">Hola, {{usuario}}</span>
+          <a href="/admin/login/logout" class="boton boton-chico boton-secundario">Cerrar sesión</a>
+        </nav>
+      {{/if}}
+    </div>
+  </header>
+
+  <main class="contenedor contenido">
+    {{{body}}}
+  </main>
+</body>
+
+</html>
